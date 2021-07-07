@@ -1,0 +1,74 @@
+<!-- Uses layouy.html formatting -->
+{% extends "layout.html" %}
+
+{% block content %}
+    <!-- Adding new data -->
+    <h3>Add New Ordered Room</h3>
+    <form id="add_ordered_room" action="/add_new_ordered_room" method ="POST">
+        Room ID:<select name="room_id">
+            {% for room in rooms %}
+                <option value="{{ room['room_id'] }}">Room ID:{{ room['room_id'] }}, Hotel Distributor: {{ room['distributor_name'] }}, for ${{ room['price'] }} a night.</option>
+            {% endfor %}
+        </select>
+
+        Order ID:<select name="order_id">
+        {% for order in orders %}
+            <option value="{{ order['order_id'] }}">Order ID:{{ order['order_id'] }}, From: {{ order['start_date'] }} To: {{ order['end_date'] }}</option>
+        {% endfor %}
+        </select>
+        
+         
+       </select>
+       <button type="submit" class="btn btn-secondary">Add</button>
+       <button type="reset" class="btn btn-dark">Clear</button>
+    </form>
+    <br><br>
+    
+    <!-- Filtering data -->
+    <h3>Filter Ordered Rooms</h3>
+    <form id="filter_ordered_rooms" action="/filter_ordered_rooms" method ="POST">
+        <input type="text" name="user_filter_input" >
+        <button type="submit" class="btn btn-secondary">Filter</button>
+        <a href="/ordered_rooms"> <button type="button" class="btn btn-dark">Clear Filter</button></a>
+    </form>
+    <br><br>
+    <br>
+
+    {% if results %} <!-- to write a loop we'll open up a codeblock  -->
+        <h3> {{ results }} </h3> <!-- varibles are accessed by using double curly brackets   -->
+    {% endif %} <!-- this "endblock" is to close the block   -->
+    <br>
+
+
+    <section class="table-padding">
+        {% if ordered_rooms %}
+        <table class="table table-hover">
+          <thead>
+        
+            <tr>
+                <!-- Creating header for each row -->
+                {% for key in ordered_rooms[0].keys() %}
+                <th scope="col">{{ key }}</th>
+                {% endfor %}
+                <!--<th scope="col">Delete Ordered Rooms</th>-->
+            </tr>
+            <tbody>
+
+                <!-- Now, iterate through every company in ordered_rooms -->
+                    {% for company in ordered_rooms %}
+                    <tr>
+                        <!-- Then iterate through every key in the current company dictionary to be used in key:value pair-->
+                        {% for key in company.keys() %}
+                        <td>{{company[key]}}</td>
+                        {% endfor %}
+                        <td>
+                        <!--<a href="/update_ordered_room/{{company['ordered_room_id']}}"><button type="button" class="btn btn-success">Update</button></a>-->
+                        <!--<a href="/delete_ordered_room/{{company['ordered_room_id']}}"><button type="button" class="btn btn-danger">Delete</button></a>-->
+                        </td>
+                    </tr>
+                    {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </section>
+{% endblock %} 

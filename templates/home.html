@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}   
+
+    <section>
+        <h2>Hotel of Hotels Database</h2>
+        <p>This site offers a way for countless travelers to travel across the world with less barriers to find a room that fits their budget and size requirements.</p>
+    </section>
+
+    <section class="p-2">
+        <dl>
+          <dt><a href="/customers" class="nav-li">Customers</a></dt>
+          <dd>
+            Displays a list of all current customers registered in this database. User is able to add a customer entity (similar to registration), with all attributes and other crucial details.
+          </dd>
+          <dt><a href="/distributors" class="nav-li">Distributors</a></dt>
+          <dd>
+            Displays data for all distributors of hotel rooms available in our database system.
+          </dd>
+          <dt><a href="/rooms" class="nav-li">Rooms</a></dt>
+          <dd>
+            Displays all room entities within the database. User can input additional room entries into the database.
+          </dd>
+          <dt><a href="/orders" class="nav-li">Orders</a></dt>
+          <dd>
+            Displays all current orders within the database. User can input additional order entries into the database.
+          </dd>
+          <dt><a href="/ordered_rooms" class="nav-li">Ordered Rooms</a></dt>
+          <dd>
+            The Ordered Rooms page represents the M:M relationship between the Room and Orders entities. The user has the ability to insert and delete data.
+          </dd>
+        </dl>
+    </section>
+
+{% endblock %} 

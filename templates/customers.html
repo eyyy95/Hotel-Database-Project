@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <!-- Adding new data -->
+    <h3>Add New Customer</h3>
+    <br>
+    <form id="addcustomer" action="/add_new_customer" method ="POST">
+        First Name: <input type="text" name="first_name" required>
+        Last Name: <input type="text" name="last_name" required>
+        Email: <input type="email" name="email" required>
+        <button type="submit" class="btn btn-secondary">Add</button>
+        <button type="reset" class="btn btn-dark">Clear</button>
+    </form>
+    <br><br>
+    
+    <!-- Filtering data -->
+    <h3>Filter Customer Information</h3>
+    <br>
+    <form id="filtercustomer" action="/filter_customer" method ="POST">
+        <input type="text" name="user_filter_input">
+        <button type="submit" class="btn btn-secondary">Filter</button>
+        <a href="/customers"> <button type="button" class="btn btn-dark">Clear Filters</button></a>
+    </form>
+    <br>
+    <br>
+
+    {% if results %} <!-- to write a loop we'll open up a codeblock  -->
+        <h3> {{ results }} </h3> <!-- varibles are accessed by using double curly brackets   -->
+    {% endif %} <!-- this "endblock" is to close the block   -->
+    <br>
+    <section class="table-padding">
+        {% if customers %}
+        <table class="table table-hover">
+          <thead>
+        
+            <tr>
+                <!-- Creating header for each row -->
+                
+                {% for key in customers[0].keys() %}
+                <th scope="col">{{ key }}</th>
+                {% endfor %}
+                <th scope="col">Edit Customer</th>
+            </tr>
+            <tbody>
+
+                <!-- Now, iterate through every person in customers -->
+                    {% for person in customers %}
+                    <tr>
+                        <!-- Then iterate through every key in the current person dictionary to be used in key:value pair-->
+                        {% for key in person.keys() %}
+                        <td>{{person[key]}}</td>
+                        {% endfor %}
+                        <td>
+                        <a href="/update_customer/{{person['customer_id']}}"><button type="button" class="btn btn-success">Update</button></a>
+                        <a href="/delete_customer/{{person['customer_id']}}"><button type="button" class="btn btn-danger">Delete</button></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </section>
+{% endblock %} 
+

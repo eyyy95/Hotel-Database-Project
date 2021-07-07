@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+       
+    <h3>Edit {{room['room_id']}}'s Information</h3>
+        <form id="update_room" action="/update_room/{{room['room_id']}}" method ="POST">
+            <input type="hidden" name="room_id" value="{{room['room_id']}}">
+            Beds: <input type="text" name="beds" value = "{{room['beds']}}">
+            City: <input type="text" name="city" value = "{{room['city']}}">
+            State: <input type="text" name="state" value = "{{room['state']}}">
+            Price: <input type="text" name="price" value = "{{room['price']}}">
+            <button type="submit" class="btn btn-success">Update</button>
+        </form>
+        <br><br>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+       
+    <h3>Edit {{ordered_rooms['room_id']}}'s Information</h3>
+        <form id="update_ordered_rooms" action="/update_ordered_rooms/{{ordered_rooms['room_id']}}" method ="POST">
+            Room ID: <input type="text" name="room_id" value = "{{ordered_rooms['room_id']}}">
+            Order ID: <input type="text" name="order_id" value = "{{ordered_rooms['order_id']}}">
+            <button type="submit" class="btn btn-success">Update</button>
+        </form>
+        <br><br>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+<!-- Uses layouy.html formatting -->
+{% extends "layout.html" %}
+
+{% block content %}
+    <!-- Adding new data -->
+    <h3>Add New Distributor</h3>
+    <form id="adddistributor" action="/add_new_distributor" method ="POST">
+      Distributor Name: <input type="text" name="distributor_name" required>
+      Distributor Phone: <input type="text" name="distributor_phone" required>
+        <button type="submit" class="btn btn-secondary">Add</button>
+        <button type="reset" class="btn btn-dark">Clear</button>
+    </form>
+    <br><br>
+    
+    <!-- Filtering data -->
+    <h3>Filter Distributor Information</h3>
+    <form id="filterdistributor" action="/filter_distributor" method ="POST">
+        <input type="text" name="user_filter_input">
+        <button type="submit" class="btn btn-secondary">Filter</button>
+        <a href="/distributors"> <button type="button" class="btn btn-dark">Clear Filters</button></a>
+    </form>
+    <br><br>
+    <br>
+
+    {% if results %} <!-- to write a loop we'll open up a codeblock  -->
+        <h3> {{ results }} </h3> <!-- varibles are accessed by using double curly brackets   -->
+    {% endif %} <!-- this "endblock" is to close the block   -->
+    <br>
+
+    <section class="table-padding">
+        {% if distributors %}
+        <table class="table table-hover">
+          <thead>
+        
+            <tr>
+                <!-- Creating header for each row -->
+                {% for key in distributors[0].keys() %}
+                <th scope="col">{{ key }}</th>
+                {% endfor %}
+                <th scope="col">Edit Distributors</th>
+            </tr>
+            <tbody>
+
+                <!-- Now, iterate through every company in distributors -->
+                    {% for company in distributors %}
+                    <tr>
+                        <!-- Then iterate through every key in the current company dictionary to be used in key:value pair-->
+                        {% for key in company.keys() %}
+                        <td>{{company[key]}}</td>
+                        {% endfor %}
+                        <td>
+                        <a href="/update_distributor/{{company['distributor_id']}}"><button type="button" class="btn btn-success">Update</button></a>
+                        <a href="/delete_distributor/{{company['distributor_id']}}"><button type="button" class="btn btn-danger">Delete</button></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </section>
+{% endblock %} 

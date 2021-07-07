@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+       
+    <h3>Edit {{customer['first_name']}}'s Information</h3>
+        <form id="update_customer" action="/update_customer/{{customer['customer_id']}}" method ="POST">
+            <input type="hidden" name="customer_id" value="{{customer['customer_id']}}">
+            First Name: <input type="text" name="first_name" value = "{{customer['first_name']}}" required>
+            Last Name: <input type="text" name="last_name" value = "{{customer['last_name']}}" required>
+            Email: <input type="text" name="email" value = "{{customer['email']}}" required>
+            <!--Homeworld: <select name="homeworld">
+                displays all options inside this dropdown
+                <option value="Planet ID">Planet Name</option>
+            </select><br>
+            Age: <input type="number" name="age" value = "{{customer['age']}}">-->
+            <button type="submit" class="btn btn-success">Update</button>
+        </form>
+        <br><br>
+
+{% endblock %}
+
+<!--for key-->

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+       
+    <h3>Edit {{distributor['distributor_id']}}'s Information</h3>
+        <form id="update_distributor" action="/update_distributor/{{distributor['distributor_id']}}" method ="POST">
+            <input type="hidden" name="distributor_id" value="{{distributor['distributor_id']}}">
+            Distributor Name: <input type="text" name="distributor_name" value = "{{distributor['distributor_name']}}">
+            Distributor Phone: <input type="text" name="distributor_phone" value = "{{distributor['distributor_phone']}}">
+            <button type="submit" class="btn btn-success">Update</button>
+        </form>
+        <br><br>
+
+{% endblock %}
