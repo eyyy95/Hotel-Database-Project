@@ -1,0 +1,330 @@
+[2021-05-14 10:46:24 -0700] [4063] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:4565']
+  backlog: 2048
+  workers: 1
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /nfs/stak/users/samuelle/public_html/hotel-finder-database
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 14468
+  group: 22441
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: app.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7ffaa303ed90>
+  on_reload: <function OnReload.on_reload at 0x7ffaa303eea0>
+  when_ready: <function WhenReady.when_ready at 0x7ffaa3058048>
+  pre_fork: <function Prefork.pre_fork at 0x7ffaa3058158>
+  post_fork: <function Postfork.post_fork at 0x7ffaa3058268>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7ffaa3058378>
+  worker_int: <function WorkerInt.worker_int at 0x7ffaa3058488>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7ffaa3058598>
+  pre_exec: <function PreExec.pre_exec at 0x7ffaa30586a8>
+  pre_request: <function PreRequest.pre_request at 0x7ffaa30587b8>
+  post_request: <function PostRequest.post_request at 0x7ffaa3058840>
+  child_exit: <function ChildExit.child_exit at 0x7ffaa3058950>
+  worker_exit: <function WorkerExit.worker_exit at 0x7ffaa3058a60>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7ffaa3058b70>
+  on_exit: <function OnExit.on_exit at 0x7ffaa3058c80>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-05-14 10:46:24 -0700] [4063] [INFO] Starting gunicorn 20.0.4
+[2021-05-14 10:46:24 -0700] [4063] [ERROR] Connection in use: ('0.0.0.0', 4565)
+[2021-05-14 10:46:24 -0700] [4063] [DEBUG] connection to ('0.0.0.0', 4565) failed: [Errno 98] Address already in use
+[2021-05-14 10:46:24 -0700] [4063] [ERROR] Retrying in 1 second.
+[2021-05-14 10:46:25 -0700] [4063] [ERROR] Connection in use: ('0.0.0.0', 4565)
+[2021-05-14 10:46:25 -0700] [4063] [DEBUG] connection to ('0.0.0.0', 4565) failed: [Errno 98] Address already in use
+[2021-05-14 10:46:25 -0700] [4063] [ERROR] Retrying in 1 second.
+[2021-05-14 10:46:26 -0700] [4063] [ERROR] Connection in use: ('0.0.0.0', 4565)
+[2021-05-14 10:46:26 -0700] [4063] [DEBUG] connection to ('0.0.0.0', 4565) failed: [Errno 98] Address already in use
+[2021-05-14 10:46:26 -0700] [4063] [ERROR] Retrying in 1 second.
+[2021-05-14 10:46:27 -0700] [4063] [ERROR] Connection in use: ('0.0.0.0', 4565)
+[2021-05-14 10:46:27 -0700] [4063] [DEBUG] connection to ('0.0.0.0', 4565) failed: [Errno 98] Address already in use
+[2021-05-14 10:46:27 -0700] [4063] [ERROR] Retrying in 1 second.
+[2021-05-14 10:46:28 -0700] [4063] [ERROR] Connection in use: ('0.0.0.0', 4565)
+[2021-05-14 10:46:28 -0700] [4063] [DEBUG] connection to ('0.0.0.0', 4565) failed: [Errno 98] Address already in use
+[2021-05-14 10:46:28 -0700] [4063] [ERROR] Retrying in 1 second.
+[2021-05-14 10:46:29 -0700] [4063] [ERROR] Can't connect to ('0.0.0.0', 4565)
+[2021-05-15 23:27:51 -0700] [23992] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:4565']
+  backlog: 2048
+  workers: 1
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /nfs/stak/users/samuelle/public_html/hotel-finder-database
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 14468
+  group: 22441
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: app.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fb771a9bd90>
+  on_reload: <function OnReload.on_reload at 0x7fb771a9bea0>
+  when_ready: <function WhenReady.when_ready at 0x7fb771ab5048>
+  pre_fork: <function Prefork.pre_fork at 0x7fb771ab5158>
+  post_fork: <function Postfork.post_fork at 0x7fb771ab5268>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fb771ab5378>
+  worker_int: <function WorkerInt.worker_int at 0x7fb771ab5488>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fb771ab5598>
+  pre_exec: <function PreExec.pre_exec at 0x7fb771ab56a8>
+  pre_request: <function PreRequest.pre_request at 0x7fb771ab57b8>
+  post_request: <function PostRequest.post_request at 0x7fb771ab5840>
+  child_exit: <function ChildExit.child_exit at 0x7fb771ab5950>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fb771ab5a60>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fb771ab5b70>
+  on_exit: <function OnExit.on_exit at 0x7fb771ab5c80>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-05-15 23:27:51 -0700] [23992] [INFO] Starting gunicorn 20.0.4
+[2021-05-15 23:27:51 -0700] [23992] [DEBUG] Arbiter booted
+[2021-05-15 23:27:51 -0700] [23992] [INFO] Listening at: http://0.0.0.0:4565 (23992)
+[2021-05-15 23:27:51 -0700] [23992] [INFO] Using worker: sync
+[2021-05-15 23:27:51 -0700] [24085] [INFO] Booting worker with pid: 24085
+[2021-05-15 23:27:51 -0700] [23992] [DEBUG] 1 workers
+[2021-05-15 23:27:51 -0700] [24085] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/nfs/stak/users/samuelle/public_html/hotel-finder-database/venv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/nfs/stak/users/samuelle/public_html/hotel-finder-database/venv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/nfs/stak/users/samuelle/public_html/hotel-finder-database/venv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/nfs/stak/users/samuelle/public_html/hotel-finder-database/venv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/nfs/stak/users/samuelle/public_html/hotel-finder-database/venv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/nfs/stak/users/samuelle/public_html/hotel-finder-database/venv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/nfs/stak/users/samuelle/public_html/hotel-finder-database/venv/lib64/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/nfs/stak/users/samuelle/public_html/hotel-finder-database/wsgi.py", line 1, in <module>
+    from app import app
+  File "/nfs/stak/users/samuelle/public_html/hotel-finder-database/app.py", line 9, in <module>
+    db_connection = db.connect_to_database()
+  File "/nfs/stak/users/samuelle/public_html/hotel-finder-database/database/db_connector.py", line 9, in connect_to_database
+    db_connection = MySQLdb.connect(host,user,passwd,db)
+  File "/nfs/stak/users/samuelle/public_html/hotel-finder-database/venv/lib64/python3.6/site-packages/MySQLdb/__init__.py", line 130, in Connect
+    return Connection(*args, **kwargs)
+  File "/nfs/stak/users/samuelle/public_html/hotel-finder-database/venv/lib64/python3.6/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (1045, "Access denied for user 'cs340_samuelle'@'flip3.engr.oregonstate.edu' (using password: YES)")
+[2021-05-15 23:27:51 -0700] [24085] [INFO] Worker exiting (pid: 24085)
+[2021-05-15 23:27:51 -0700] [23992] [INFO] Shutting down: Master
+[2021-05-15 23:27:51 -0700] [23992] [INFO] Reason: Worker failed to boot.
+[2021-05-18 10:58:35 -0700] [20397] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:4565']
+  backlog: 2048
+  workers: 1
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /nfs/stak/users/samuelle/public_html/hotel-finder-database
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 14468
+  group: 22441
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: app.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7efd276fed90>
+  on_reload: <function OnReload.on_reload at 0x7efd276feea0>
+  when_ready: <function WhenReady.when_ready at 0x7efd27718048>
+  pre_fork: <function Prefork.pre_fork at 0x7efd27718158>
+  post_fork: <function Postfork.post_fork at 0x7efd27718268>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7efd27718378>
+  worker_int: <function WorkerInt.worker_int at 0x7efd27718488>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7efd27718598>
+  pre_exec: <function PreExec.pre_exec at 0x7efd277186a8>
+  pre_request: <function PreRequest.pre_request at 0x7efd277187b8>
+  post_request: <function PostRequest.post_request at 0x7efd27718840>
+  child_exit: <function ChildExit.child_exit at 0x7efd27718950>
+  worker_exit: <function WorkerExit.worker_exit at 0x7efd27718a60>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7efd27718b70>
+  on_exit: <function OnExit.on_exit at 0x7efd27718c80>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-05-18 10:58:35 -0700] [20397] [INFO] Starting gunicorn 20.0.4
+[2021-05-18 10:58:35 -0700] [20397] [ERROR] Connection in use: ('0.0.0.0', 4565)
+[2021-05-18 10:58:35 -0700] [20397] [DEBUG] connection to ('0.0.0.0', 4565) failed: [Errno 98] Address already in use
+[2021-05-18 10:58:35 -0700] [20397] [ERROR] Retrying in 1 second.
+[2021-05-18 10:58:36 -0700] [20397] [ERROR] Connection in use: ('0.0.0.0', 4565)
+[2021-05-18 10:58:36 -0700] [20397] [DEBUG] connection to ('0.0.0.0', 4565) failed: [Errno 98] Address already in use
+[2021-05-18 10:58:36 -0700] [20397] [ERROR] Retrying in 1 second.
+[2021-05-18 10:58:37 -0700] [20397] [ERROR] Connection in use: ('0.0.0.0', 4565)
+[2021-05-18 10:58:37 -0700] [20397] [DEBUG] connection to ('0.0.0.0', 4565) failed: [Errno 98] Address already in use
+[2021-05-18 10:58:37 -0700] [20397] [ERROR] Retrying in 1 second.
+[2021-05-18 10:58:38 -0700] [20397] [ERROR] Connection in use: ('0.0.0.0', 4565)
+[2021-05-18 10:58:38 -0700] [20397] [DEBUG] connection to ('0.0.0.0', 4565) failed: [Errno 98] Address already in use
+[2021-05-18 10:58:38 -0700] [20397] [ERROR] Retrying in 1 second.
+[2021-05-18 10:58:39 -0700] [20397] [ERROR] Connection in use: ('0.0.0.0', 4565)
+[2021-05-18 10:58:39 -0700] [20397] [DEBUG] connection to ('0.0.0.0', 4565) failed: [Errno 98] Address already in use
+[2021-05-18 10:58:39 -0700] [20397] [ERROR] Retrying in 1 second.
+[2021-05-18 10:58:40 -0700] [20397] [ERROR] Can't connect to ('0.0.0.0', 4565)
